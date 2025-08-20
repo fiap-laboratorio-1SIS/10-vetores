@@ -3,17 +3,24 @@ import java.util.Scanner;
 public class Exemplo01 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[] x = new int[5];
+        int[] x = new int[6];
 
-        // armazenar 5 valores recebidos pelo teclado
+        // armazenamento dos números
         for(int i = 0; i < x.length; i++) {
-            System.out.print("Informe o valor --> ");
+            System.out.print("Valor --> ");
             x[i] = in.nextInt();
         }
 
-        // impressão dos valores no terminal
+        // impressão dos valores
         for(int i = 0; i < x.length; i++) {
-            System.out.println(x[i]);
+            System.out.print(x[i] + " ");
         }
+
+        // impressão invertido
+        System.out.println();
+        for(int i = x.length-1; i >= 0; i--) {
+            System.out.print(x[i] + " ");
+        }
+
     }
 }
